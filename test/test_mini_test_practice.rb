@@ -9,6 +9,14 @@ class TestMiniTestPractice < MiniTest::Unit::TestCase
     refute_nil ::MiniTestPractice::VERSION
   end
 
+  def enough_length?
+
+      assert_equal true, @my_class.enough_length?('00000000')
+      assert_equal true, @my_class.enough_length?('000')
+      assert_equal false, @my_class.enough_length?('00')
+      assert_equal false, @my_class.enough_length?('000000000')
+  end
+
   def check_number?
 
       assert_equal true, @my_class.check_number?(0)

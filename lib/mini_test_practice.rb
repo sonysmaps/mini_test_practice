@@ -20,6 +20,13 @@ module MiniTestPractice
         return false
       end
     end
+  
+    def enough_length?(value)
+       if value.length >=3 && value.length <= 8 then
+        return true
+      end
+        return false
+    end
   end
 end
 
