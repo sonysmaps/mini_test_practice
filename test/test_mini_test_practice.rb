@@ -9,6 +9,15 @@ class TestMiniTestPractice < MiniTest::Unit::TestCase
     refute_nil ::MiniTestPractice::VERSION
   end
 
+  def divide?
+
+      assert_equal 2, @my_class.devide?(2,1)
+      assert_equal 1.5, @my_class.devide?(3,2)
+      assert_throws( Exception ,'divide 0 ERR') { @my_class.devide?(3,0)}
+
+ end
+
+
   def enough_length?
 
       assert_equal true, @my_class.enough_length?('00000000')

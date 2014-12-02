@@ -22,11 +22,21 @@ module MiniTestPractice
     end
   
     def enough_length?(value)
-       if value.length >=3 && value.length <= 8 then
+       if value.length >=3 and value.length <= 8 then
         return true
       end
         return false
     end
+
+    def divide?(value1,value2)
+        if value2 == 0 then
+          throw
+        end
+        value = value1 / value2
+        return value
+    end
+
+
   end
 end
 
