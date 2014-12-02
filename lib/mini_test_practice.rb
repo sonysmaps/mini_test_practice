@@ -28,7 +28,7 @@ module MiniTestPractice
         return false
     end
 
-    def divide?(value1,value2)
+    def devide?(value1,value2)
         if value2 == 0 then
           throw
         end
