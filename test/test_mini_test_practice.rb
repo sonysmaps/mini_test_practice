@@ -9,11 +9,32 @@ class TestMiniTestPractice < MiniTest::Unit::TestCase
     refute_nil ::MiniTestPractice::VERSION
   end
 
-  def test_devide?
+  def test_hello
+      
+      assert_equal "Hello",capture_io{ @my_class.hello}[0]
+  
+end
 
-      assert_equal 2, @my_class.devide?(2,1)
-      assert_equal 1, @my_class.devide?(3,2)
-      assert_throws( Exception ,'divide 0 ERR') { @my_class.devide?(3,0)}
+
+  def test_fizz_buzz
+
+      assert_equal "FizzBuzz", @my_class.fizz_buzz(15)
+      assert_equal "Fizz", @my_class.fizz_buzz(3)
+      assert_equal "Buzz", @my_class.fizz_buzz(5)
+      assert_equal "Buzz", @my_class.fizz_buzz(10)
+      assert_equal "Fizz", @my_class.fizz_buzz(6)
+      assert_equal  nil, @my_class.fizz_buzz(4)
+
+
+  end 
+
+
+
+  def test_devide
+
+      assert_equal 2, @my_class.devide(2,1)
+      assert_equal 1, @my_class.devide(3,2)
+      assert_throws( Exception ,'divide 0 ERR') { @my_class.devide(3,0)}
 
  end
 

@@ -28,7 +28,7 @@ module MiniTestPractice
         return false
     end
 
-    def devide?(value1,value2)
+    def devide(value1,value2)
         if value2 == 0 then
           throw
         end
@@ -36,6 +36,22 @@ module MiniTestPractice
         return value
     end
 
+    def fizz_buzz(value)
+        if value % 15 == 0 then
+           return "FizzBuzz"
+        elsif value % 3 == 0 then
+           return "Fizz"
+        elsif value % 5 == 0 then
+           return "Buzz"
+        else 
+           return nil
+        end
+    end
+
+    def hello      
+        print("Hello")
+#        puts("Hello")
+    end
 
   end
 end
